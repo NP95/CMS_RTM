@@ -83,12 +83,8 @@ void setup( void )
   delay( 1000 );
   Serial.println( "Test writing Retimer to generate PRBS31" );
   Wire.begin(); // Initialize I2C library
-}
 
-void loop( void )
-{
-
-setRegister(Broadcast_Enable,Broadcast_Enable_Data,Broadcast_Enable_Mask);
+  setRegister(Broadcast_Enable,Broadcast_Enable_Data,Broadcast_Enable_Mask);
 setRegister(Channel_Registers,Reset_Channel_Registers_Data,Reset_Channel_Registers_Mask);
 setRegister(Preset_Signal_Detect,,);
 setRegister(Override,Divider_Select_Override_Data,Divider_Select_Override_Mask);
@@ -104,6 +100,13 @@ setRegister(Clock_enable,Clock_enable_Data,Clock_enable_Mask);
 setRegister(Override,Loopthr_select_override_Data,Loopthr_select_override_Mask);
 setRegister(Output_Mux_PRBS_Gen,Output_Mux_PRBS_Gen_Data,Output_Mux_PRBS_Gen_Mask);
 setRegister(PRBS_Load,PRBS_Load_Data,PRBS_Load_Mask);
+
+}
+
+void loop( void )
+{
+
+;
 
 }
 
